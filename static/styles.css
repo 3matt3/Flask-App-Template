@@ -1,19 +1,14 @@
 ul {
     list-style-type: none;
     margin: auto;
-    background-color: rgba(27, 21, 114, 0.815);
-    
-    
-    
+    background-color: rgba(27, 21, 114, 0.815);   
 }
-
 li {
     float: left;
     margin: auto;
     padding: 2%;
     border-color: black;
 }
-
 a {
     display: block;
     padding: 10px;
@@ -24,9 +19,13 @@ a {
     border-color: black;
     border-width: 10;
     margin: auto;
-  }
+}
+
+
+
 body {
     background-color: rgb(22, 22, 22);
+    max-height: max-content;
 
 }
 #background {
@@ -41,21 +40,26 @@ body {
     width: 500px;
 
   }
+
+
+#main {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
 #home-window {
-    margin-left: auto;
-    padding: 50px;
-    padding-left: 40%;
     display: flexbox;
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
 }
 #window-text {
-    margin: auto;
-    border-top: 50px;
-    padding-top: 15%;
     width: 500px;
+    height: 400px;
     resize: none;
-
 }
 
-#submit-text {
+#window-submit {
     margin: auto;
+    justify-content: center;
 }
