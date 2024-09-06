@@ -8,17 +8,20 @@ li {
     margin: auto;
     padding: 2%;
     border-color: black;
+    color: ;
 }
 a {
     display: block;
     padding: 10px;
-    background-color: #353670;
+    background-color: #000000de;
     text-decoration: none;
-    color: rgb(184, 184, 184);
+    color: rgba(255, 20, 20, 0.863);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font: Cambria, italic;
     border-color: black;
     border-width: 10;
     margin: auto;
+    
 }
 
 
@@ -62,4 +65,22 @@ body {
 #window-submit {
     margin: auto;
     justify-content: center;
+}
+
+#placeholder {
+    color: antiquewhite;
+}
+
+#login-form {
+    color: rgb(221, 53, 53);
+    background-color: rgba(0, 0, 0, 0.808);
+    margin: auto;
+    padding: 3px;
+    text-align: center;
+    width: 7%;
+    
+}
+
+#login-text {
+    margin: auto;
 }

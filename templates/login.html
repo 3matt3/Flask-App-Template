@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <div id="main-login">
-    <p id="placeholder">Login</p>
+    
+    <div id="login-window">
+        <form id="login-form">
+            <fieldset>
+                <label for="username" id="label-username">Username <input type="text" id="username" ></label>
+                <label for="password" id="label-username">Password <input type="text" id="password" ></label>
+                <label for="email" id="label-email">Email <input type="email" id="email"></label>
+            </fieldset>
+        </form>
+    </div>
+
+
 </div>
 
 {% endblock content %}
