@@ -1,14 +1,13 @@
-from flask import Flask
+from flask import Flask, Blueprint
 from flask import render_template, redirect, url_for, request
 import psycopg2
 from uuid import UUID, uuid4
 
+#   To start test server. Be in main directory in console. While in the virtualenv (.venv), type 'flask run'
 
-#
-#   To start test server. Be in main directory in console. In console python -m flask --app main run
-#
+#app = Flask(__name__)
 
-app = Flask(__name__)
+app = Blueprint('app', __name__)
 
 @app.route("/")
 def landing():
@@ -26,14 +25,6 @@ def home():
 
     return render_template('home.html')
 
-@app.route("/admin")
-def admin():
-    return render_template('admin.html')
-
-@app.route("/login")
-def login():
-    return render_template('login.html')
-
 
 @app.route("/about")
 def about():
@@ -45,6 +36,9 @@ def profile():
 
 #<input type="submit" id="submit-btn" value="" >
 
+
+
+#   //  Connect to PostgreSQL DB
 conn = psycopg2.connect(host="localhost", dbname="SubstanceSecrets", user="postgres", password="merlayn313", port="5432")
 
 cur = conn.cursor()

@@ -1,13 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<div id="main-login">
-    
+<div id="main-login" class="column is-4 is-offset-4">
+    <h3 class="login-title">Login</h3>
     <div id="login-window">
-        <form id="login-form">
+        <form id="login-form" method="post" action="/login">
             <fieldset>
-                <label for="username" id="label-username">Username <input type="text" id="username" ></label>
-                <label for="password" id="label-username">Password <input type="text" id="password" ></label>
-                <label for="email" id="label-email">Email <input type="email" id="email"></label>
+                <div class="field">
+                    <div class="control">
+                        <label for="username" id="label-username">Username
+                            <input type="text" name="username" id="username" placeholder="username..." >
+                        </label>                       
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label for="password" id="label-username">Password 
+                            <input type="password" name="password" id="password" placeholder="password..." >
+                        </label>                      
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                </div>
+                <button class="button is-block is-info is-large is-fullwidth">Login</button> 
             </fieldset>
         </form>
     </div>
@@ -16,3 +34,4 @@
 </div>
 
 {% endblock content %}
+
