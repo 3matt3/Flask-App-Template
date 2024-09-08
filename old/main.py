@@ -3,17 +3,19 @@ from flask import render_template, redirect, url_for, request
 import psycopg2
 from uuid import UUID, uuid4
 
+
 #   To start test server. Be in main directory in console. While in the virtualenv (.venv), type 'flask run'
 
 #app = Flask(__name__)
 
-app = Blueprint('app', __name__)
+main = Blueprint('main', __name__)
 
-@app.route("/")
+
+@main.route("/")
 def landing():
     return redirect(url_for("home"))
 
-@app.route("/home", methods=['GET', 'POST'])
+@main.route("/home", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
         if(request.form['submit-txt'] == ""):
@@ -26,16 +28,21 @@ def home():
     return render_template('home.html')
 
 
-@app.route("/about")
+@main.route("/about")
 def about():
     return render_template('about.html')
 
-@app.route("/profile")
+@main.route("/profile")
 def profile():
     return render_template('profile.html')
 
+
+
+
 #<input type="submit" id="submit-btn" value="" >
 
+if __name__ == '__app__':
+    main.run(host='0.0.0.0', port=5333, debug=True)
 
 
 #   //  Connect to PostgreSQL DB

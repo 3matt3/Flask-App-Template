@@ -4,6 +4,7 @@ from uuid import UUID, uuid4
 conn = psycopg2.connect(host="localhost", dbname="SubstanceSecrets", user="postgres", password="merlayn313", port="5432")
 
 cur = conn.cursor()
+cur.connection.close()
 
 #   //  Database CRUD Functions
 

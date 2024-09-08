@@ -7,8 +7,8 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    app.config['SECRET_KEY'] = '333mmm333mmm3m3m3m'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:merlayn313@localhost:5432/SubstanceSecrets'
 
     db.init_app(app)
 
@@ -17,7 +17,8 @@ def create_app():
     app.register_blueprint(auth_blueprint)
 
     # blueprint for non-auth parts of app
-    from .app import app as app_blueprint
+    from .main import main as app_blueprint
     app.register_blueprint(app_blueprint)
 
     return app
+
