@@ -4,6 +4,8 @@ from . import main
 
 #main = Blueprint('main', __name__, template_folder="templates", static_folder="static")
 
+
+
 @main.route("/", methods=['GET', 'POST'])
 def landing():
     return render_template('home.html')
@@ -12,11 +14,8 @@ def landing():
 def home():
     return render_template('home.html')
 
-
 @main.route("/about")
 def about():
     return render_template('about.html')
 
-@main.route("/profile")
-def profile():
-    return render_template('profile.html')
+
